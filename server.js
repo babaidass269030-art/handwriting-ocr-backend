@@ -23,7 +23,7 @@ app.post('/api/ocr', async (req, res) => {
     }
 
     const cleanBase64 = imageBase64.replace(/^data:image\/\w+;base64,/, '');
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const result = await model.generateContent([
       "Transcribe all handwriting from this image accurately into editable text. Maintain the original layout and line breaks exactly.",
